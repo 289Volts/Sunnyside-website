@@ -93,8 +93,8 @@ nav {
 .active {
 	display: block;
 	transition: animation 1s ease;
-	animation: slideOut 1s ease alternate;
-	animation: slideDown 1s ease alternate;
+	animation: slideOut 0.5s ease alternate;
+	animation: slideDown 0.5s ease alternate;
 }
 
 nav::after {
