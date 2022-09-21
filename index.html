@@ -26,7 +26,7 @@
     </header>
     <section id="hero-sect" class="hero-section">
       <!-- <div><img class="hero-img" src="images/mobile/image-header.jpg" alt=""></div> -->
-      <div class="hero-section__content">
+      <div  id="hero-sect__cont" class="hero-section__content">
         <h1 class="hero-section__heading">We are creatives</h1>
         <div  id="hero-sect__arrow" class="hero-section__arrow">
           <a href="#main-content"><img src="images/icon-arrow-down.svg" alt="arrow down"></a>
@@ -144,7 +144,8 @@
       const btn = document.getElementById("ham-btn");
       const nav = document.getElementById("nav-menu");
       const hero = document.getElementById("hero-sect")
-      const heroCont = document.getElementById("hero-sect__arrow")
+      const heroCont = document.getElementById("hero-sect__cont")
+      const heroArrow = document.getElementById("hero-sect__arrow")
 
 
       btn.addEventListener("click", () => {
@@ -152,9 +153,9 @@
       });
 
       window.onclick = (e) => {
-  if ((e.target == hero) || (e.target == heroCont)) {
-    nav.classList.toggle("active");
-    // nav.style.display = "none";
+  if ((e.target == hero) || (e.target == heroArrow) || (e.target == heroCont)) {
+    // nav.classList.toggle("active");
+    nav.classList.remove("active");
   } 
 }
     </script>
