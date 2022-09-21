@@ -212,7 +212,8 @@ nav::after {
 	background-color: transparent;
 }
 
-.photography-container, .graphic-container {
+.photography-container,
+.graphic-container {
 	background: url("images/mobile/image-photography.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -247,7 +248,7 @@ nav::after {
 }
 
 .testimonials-container {
-	padding: 3.5rem 2rem;
+	padding: 3.5rem 2rem 0 2rem;
 	text-align: center;
 }
 
@@ -259,14 +260,85 @@ nav::after {
 	color: var(--Grayishblue);
 }
 
+.testimonial-card {
+	padding: 4rem 0;
+}
+
 .testimonial-card__img img {
 	width: 30%;
 	border-radius: 50%;
 }
 
 .name {
-color: var(--black);
+	color: var(--black);
 	font-family: "Fraunces", serif;
-	font-size: 1.2rem;
-	font-weight: 700;
+	font-size: 1.3rem;
+	font-weight: 900;
+	margin-bottom: 1rem;
+}
+
+.position {
+	font-weight: 500;
+	color: var(--Grayishblue);
+	font-size: 0.876rem;
+}
+
+.card-2,
+.card-3 {
+	padding-top: 1rem;
+}
+
+.image-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+}
+
+.image-cards img {
+	width: 100%;
+}
+
+.img-card {
+	width: 50%;
+}
+
+footer {
+	padding: 4rem 2rem;
+	background-color: var(--footer);
+	text-align: center;
+}
+
+footer a:not(.social-links a) {
+	color: var(--graphicdesigntext);
+}
+
+.footer-logo {
+	margin-bottom: 2rem;
+}
+
+.footer-logo a{
+	font-weight: 900;
+	font-size: 2.3rem !important;
+	
+}
+
+.footer-nav, .social-icons {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-nav {
+	margin-bottom: 3rem;
+}
+
+.footer-nav a {
+	font-weight: 600;
+	color: var(--Darkblue);
+}
+
+.social-icons {
+width: 60%;
 }
