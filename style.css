@@ -9,6 +9,10 @@ img,
 	outline: none;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
 	--header: #3ebfff;
 	--white: #fff;
@@ -77,7 +81,6 @@ nav {
 
 .slide {
 	transition: animation 1s ease;
-	
 }
 
 @keyframes slideDown {
@@ -85,16 +88,13 @@ nav {
 	to {transform: translateY(0); }
 }
 
-@keyframes slideOut {
-	from {transform: translateX(-200px);}
-	to {transform: translateX(0);}
-}
+
 
 .active {
 	display: block;
 	transition: animation 1s ease;
-	animation: slideOut 0.5s ease alternate;
-	animation: slideDown 0.5s ease alternate;
+	animation: slideOut 0.8s ease alternate;
+	animation: slideDown 0.8s ease alternate;
 }
 
 nav::after {
@@ -171,6 +171,15 @@ nav::after {
 	margin-bottom: 3rem;
 }
 
+.hero-section__arrow{
+transition: all 1s ease;
+animation: bounce 1s 2s linear alternate infinite;
+}
+
+@keyframes bounce {
+	0% {transform: translateY(-5px);}
+	100% {transform: translateY(10px);}
+}
 .transform-image img,
 .standout-image img {
 	width: 100%;
@@ -236,7 +245,7 @@ nav::after {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 77vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
@@ -251,12 +260,12 @@ nav::after {
 
 .graphic-textcontent__copy,
 .graphic-textcontent__heading {
-	color: var(--graphicdesigntext);
+	color: var(--white);
 }
 
 .photography-textcontent__copy,
 .photography-textcontent__heading {
-	color: var(--Darkblue);
+	color: var(--white);
 }
 
 .transform-textcontent__cta::before {
@@ -273,6 +282,10 @@ nav::after {
 	text-align: center;
 }
 
+.testimonial-card {
+	padding: 4rem 0;
+}
+
 .testimonials-heading h2 {
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -281,10 +294,9 @@ nav::after {
 	color: var(--Grayishblue);
 }
 
-.testimonial-card {
-	padding: 4rem 0;
+.testimonial-card__copy {
+	padding: 1.2rem 1rem;
 }
-
 .testimonial-card__img img {
 	width: 30%;
 	border-radius: 50%;
@@ -295,7 +307,7 @@ nav::after {
 	font-family: "Fraunces", serif;
 	font-size: 1.3rem;
 	font-weight: 900;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .position {
