@@ -81,8 +81,8 @@ nav {
 }
 
 @keyframes slideDown {
-	from {transform: translateY(-200px); opacity: 0%;}
-	to {transform: translateY(0); opacity: 100%;}
+	from {transform: translateY(-200px);}
+	to {transform: translateY(0); }
 }
 
 @keyframes slideOut {
