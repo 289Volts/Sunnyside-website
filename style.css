@@ -20,7 +20,7 @@ html {
 	--Yellow: hsl(51, 100%, 49%);
 	--graphicdesigntext: hsl(167, 40%, 24%);
 	--Darkblue: hsl(198, 62%, 26%);
-	--footer:#90d4C5;
+	--footer: #90d4c5;
 	--Verydarkdesaturatedblue: hsl(212, 27%, 19%);
 	--Verydarkgrayishblue: hsl(213, 9%, 39%);
 	--Darkgrayishblue: hsl(232, 10%, 55%);
@@ -52,10 +52,6 @@ header {
 	position: relative;
 }
 
-.logo a {
-	font-weight: 700;
-	font-size: 1.2rem;
-}
 
 .hamburger-btn {
 	background: transparent;
@@ -76,13 +72,15 @@ nav {
 	right: 0;
 	top: 5rem;
 	z-index: 1;
-	
 }
 
 @keyframes slideDown {
-	from {transform: translateY(-400px);
+	from {
+		transform: translateY(-400px);
 	}
-	to {transform: translateY(0); }
+	to {
+		transform: translateY(0);
+	}
 }
 .active {
 	display: block;
@@ -164,14 +162,18 @@ nav::after {
 	margin-bottom: 3rem;
 }
 
-.hero-section__arrow{
-transition: animation 1s ease;
-animation: bounce 1s 2s linear alternate infinite;
+.hero-section__arrow {
+	transition: animation 1s ease;
+	animation: bounce 1s 2s linear alternate infinite;
 }
 
 @keyframes bounce {
-	0% {transform: translateY(-7px);}
-	100% {transform: translateY(10px);}
+	0% {
+		transform: translateY(-7px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
 }
 .transform-image img,
 .standout-image img {
@@ -318,34 +320,32 @@ animation: bounce 1s 2s linear alternate infinite;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, minmax(180px, 1fr));
-	
 }
 
-
 .milkbottle {
-background: url("images/mobile/image-gallery-milkbottles.jpg");
-background-size: cover;
+	background: url("images/mobile/image-gallery-milkbottles.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .orange {
-background: url("images/mobile/image-gallery-orange.jpg");
-background-size: cover;
+	background: url("images/mobile/image-gallery-orange.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .cone {
-background: url("images/mobile/image-gallery-cone.jpg");
-background-size: cover;
+	background: url("images/mobile/image-gallery-cone.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .sugar {
-background: url("images/mobile/image-gallery-sugar-cubes.jpg");
-background-size: cover;
+	background: url("images/mobile/image-gallery-sugar-cubes.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -368,8 +368,8 @@ footer a {
 	width: 55%;
 }
 
-
-.footer-nav, .social-icons {
+.footer-nav,
+.social-icons {
 	width: 88%;
 	margin: auto;
 	display: flex;
@@ -387,7 +387,71 @@ footer a {
 }
 
 .social-icons {
-width: 50%;
+	width: 50%;
 }
 
+@media (min-width: 768px) {
+	header {
+		flex-wrap: nowrap;
+	}
+	.hamburger {
+		display: none;
+	}
 
+	nav {
+		display: block;
+		width: auto;
+		padding: 0;
+		background-color: transparent;
+		position: static;
+		display: flex;
+	align-items: center;
+	margin: 0;
+		
+	}
+
+	nav::after {
+		border: 0;
+	}
+	.nav-links {
+		flex-direction: row;
+		/* justify-content: space-between; */
+		/* width: 40%; */
+	}
+
+	.nav-link {
+		width: auto;
+	}
+
+	.nav-link a {
+		padding: 0.8rem 1rem;
+		color: var(--white);
+		font-weight: 500;
+		display: inline-block;
+	}
+
+	.nav-link__cta {
+		padding: 0;
+		margin-left: ;
+	}
+
+	.nav-link__btn {
+		background-color: white;
+		color: var(--black);
+	}
+
+	.hero-section {
+		background: url("images/desktop/image-header.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.hero-section__content {
+		transform: translateY(0.5rem);
+	}
+
+	.hero-section__heading {
+		font-size: 3rem;
+	}
+}
